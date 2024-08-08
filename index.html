@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #84adff;
+        color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #ecf2ff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style the heading */
+        .container h1 {
+            font-size: 2.5em;
+            color: #1d4ed8;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Style the horizontal rule */
+        hr {
+            border: none;
+            border-top: 2px solid #e5e7eb;
+            margin-bottom: 20px;
+        }
+
+        /* Style the search input */
+        #search_field {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 1.2em;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        #search_field:focus {
+            border-color: #1d4ed8;
+        }
+
+        /* Style the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 1.1em;
+            text-align: left;
+        }
+
+        td:first-child {
+            font-size: 2em;
+        }
+
+        td:first-child {
+            cursor: pointer;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+
+        /* Add hover effect to rows */
+        tr:hover {
+            background-color: #e0f2fe;
+        }
+
+        /* Add some space between the search box and the table */
+        form {
+            margin-bottom: 20px;
+        }
+
+        .enlarged-emoji {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5em;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 2px solid #1d4ed8;
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Emojee - Emoji 🔍 Application</h1>
+        <hr>
+        <form action="">
+            <input type="text" name="" id="search_field" placeholder="Emojee Search..">
+        </form>
+        <br>
+        <table>
+            <tbody id="emoje_container"></tbody>
+        </table>
+    </div>
+    <div id="enlarged_emoji" class="enlarged-emoji"></div>
+    <script src="./emojee.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
